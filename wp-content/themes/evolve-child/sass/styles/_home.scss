@@ -1,0 +1,28 @@
+/* Content Boxes*/
+.home-content-boxes {
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $default-orange !important;
+        min-height: 500px;
+        h2 {
+            font-family: $menu-font !important;
+            color: $white;
+            // font-size: 30px;
+        }
+        p {
+            font-size: 20px;
+            font-family: $sub-text !important;
+            color: $light-gray;
+        }
+        .fa {
+            color: $icon-color;
+        }
+        .read-more {
+            background: $default-blue;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+}

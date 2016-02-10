@@ -1,0 +1,43 @@
+/*
+Theme Name: evolve-child
+Theme URI: http://absolutepressurewashing.net/evolve-child/
+Version: 3.5.0
+Description: A child of the evolve theme
+Author: Paul Kirby
+Author URI: http://paulkirbyproductions.com
+Template: evolve
+Tags: buddypress, two-columns, fixed-layout, fluid-layout, responsive-layout, left-sidebar, right-sidebar, full-width-template, sticky-post, threaded-comments, microformats, post-formats, black, blue, white, dark, flexible-header, featured-images, custom-background, custom-colors, custom-header, custom-menu, theme-options, translation-ready
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+@import "compass";
+@import "compass/reset";
+
+/* Partials */
+@import "partials/_variables.scss";
+
+/* Style */
+@import "styles/_menus.scss";
+@import "styles/_home.scss";
+@import "styles/_contact.scss";
+@import "styles/_whatwedo.scss";
+
+.btn {
+    background: $default-blue;
+    border: none !important;
+    box-shadow: none !important;
+    color: $white !important;
+}
+.btn-contact {
+    padding: 8px 25px !important;
+    font-size: 18px !important;
+    font-family: $menu-font;
+}
+// .page {
+//     a {
+//         color: $links !important;
+//     }
+//     a:hover {
+//         color: $links-hover !important;
+//     }
+// }

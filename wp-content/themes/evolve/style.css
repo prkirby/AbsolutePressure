@@ -1,4 +1,4 @@
-/* 
+/*
 Theme Name: evolve
 Theme URI: http://theme4press.com/evolve-multipurpose-wordpress-theme/
 Version: 3.5.0
@@ -7,7 +7,7 @@ Author: Theme4Press
 Author URI: http://theme4press.com
 Tags: buddypress, two-columns, fixed-layout, fluid-layout, responsive-layout, left-sidebar, right-sidebar, full-width-template, sticky-post, threaded-comments, microformats, post-formats, black, blue, white, dark, flexible-header, featured-images, custom-background, custom-colors, custom-header, custom-menu, theme-options, translation-ready
 License: GNU General Public License v2.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 
@@ -279,7 +279,7 @@ a:link {
 .edit-post,
 .edit-page {
     visibility: hidden;
-}	
+}
 
 .edit-post a.post-edit-link,
 .edit-page a.post-edit-link {
@@ -621,7 +621,7 @@ table#recaptcha_table:before {
 #logo {
     position: relative;
     font: 400 39px/39px Roboto;
-    /* float:left;  
+    /* float:left;
     margin: 0 20px 0 10px; */
     letter-spacing: -0.01em;
 }
@@ -2373,7 +2373,7 @@ ul#slides {
 }
 
 
-/* Navigation arrow text; 
+/* Navigation arrow text;
 indent moved to span inside "a", for IE7;
   apparently, a negative text-indent on an "a" link moves the link as well as the text */
 
@@ -2406,8 +2406,8 @@ indent moved to span inside "a", for IE7;
 }
 
 
-/* disabled arrows, hide or reduce opacity: opacity: .5; 
-	filter: alpha(opacity=50); 
+/* disabled arrows, hide or reduce opacity: opacity: .5;
+	filter: alpha(opacity=50);
 */
 
 .anythingSlider .arrow.disabled {
@@ -2415,7 +2415,7 @@ indent moved to span inside "a", for IE7;
 }
 
 
-/* all panels inside the slider; 
+/* all panels inside the slider;
 	horizontal mode */
 
 .anythingSlider .panel {

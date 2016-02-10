@@ -1,0 +1,172 @@
+/*
+Theme Name: evolve-child
+Theme URI: http://absolutepressurewashing.net/evolve-child/
+Version: 3.5.0
+Description: A child of the evolve theme
+Author: Paul Kirby
+Author URI: http://paulkirbyproductions.com
+Template: evolve
+Tags: buddypress, two-columns, fixed-layout, fluid-layout, responsive-layout, left-sidebar, right-sidebar, full-width-template, sticky-post, threaded-comments, microformats, post-formats, black, blue, white, dark, flexible-header, featured-images, custom-background, custom-colors, custom-header, custom-menu, theme-options, translation-ready
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/* Partials */
+/* Colors */
+/* Fonts */
+/* Style */
+/* Main Menu */
+/* line 2, sass/styles/_menus.scss */
+#menu-main-menu {
+  text-align: center;
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: center; }
+  /* line 7, sass/styles/_menus.scss */
+  #menu-main-menu li {
+    background-size: 100% 200%;
+    background-image: linear-gradient(to top, #1e3670 50%, #bc673c 50%);
+    -webkit-transition: background-position .2s;
+    -moz-transition: background-position .2s;
+    transition: background-position .2s;
+    width: 16.66%; }
+    @media (max-width: 1000px) {
+      /* line 15, sass/styles/_menus.scss */
+      #menu-main-menu li a {
+        font-size: 12px !important; } }
+  /* line 20, sass/styles/_menus.scss */
+  #menu-main-menu li:hover {
+    background-position: 0 -100%; }
+  /* line 23, sass/styles/_menus.scss */
+  #menu-main-menu .active {
+    background-color: #1e3670 !important; }
+    /* line 25, sass/styles/_menus.scss */
+    #menu-main-menu .active a {
+      background-color: #1e3670 !important; }
+
+/* Content Boxes*/
+/* line 3, sass/styles/_home.scss */
+.home-content-boxes .content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #bc673c !important;
+  min-height: 500px; }
+  /* line 9, sass/styles/_home.scss */
+  .home-content-boxes .content-box h2 {
+    font-family: Questrial !important;
+    color: #fff; }
+  /* line 14, sass/styles/_home.scss */
+  .home-content-boxes .content-box p {
+    font-size: 20px;
+    font-family: Rosario !important;
+    color: #c6cfe8; }
+  /* line 19, sass/styles/_home.scss */
+  .home-content-boxes .content-box .fa {
+    color: #1e3670; }
+  /* line 22, sass/styles/_home.scss */
+  .home-content-boxes .content-box .read-more {
+    background: #1e3670;
+    border: none !important;
+    box-shadow: none !important; }
+
+/* line 1, sass/styles/_whatwedo.scss */
+.services {
+  display: flex;
+  flex-direction: column; }
+  /* line 4, sass/styles/_whatwedo.scss */
+  .services .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 60px 0; }
+    /* line 9, sass/styles/_whatwedo.scss */
+    .services .service h1 {
+      text-align: center;
+      font-family: Questrial; }
+    /* line 13, sass/styles/_whatwedo.scss */
+    .services .service hr {
+      height: 3px;
+      width: 85%;
+      border-color: #bc673c;
+      background-color: #bc673c; }
+    /* line 19, sass/styles/_whatwedo.scss */
+    .services .service .service-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start; }
+      /* line 24, sass/styles/_whatwedo.scss */
+      .services .service .service-content .service-img {
+        width: 30%; }
+      /* line 27, sass/styles/_whatwedo.scss */
+      .services .service .service-content .service-desc {
+        width: 65%; }
+
+/* line 25, sass/style.scss */
+.btn {
+  background: #1e3670;
+  border: none !important;
+  box-shadow: none !important;
+  color: #fff !important; }
+
+/* line 31, sass/style.scss */
+.btn-contact {
+  padding: 8px 25px !important;
+  font-size: 18px !important;
+  font-family: Questrial; }
