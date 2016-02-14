@@ -25,7 +25,8 @@
 *.log
 *.sql
 *.sqlite
-*.scssc
+wp-content/themes/evolve-child/.sass-cache
+wp-content/themes/evolve-child/.sass-cache/*
 
 # OS generated files #
 ######################
