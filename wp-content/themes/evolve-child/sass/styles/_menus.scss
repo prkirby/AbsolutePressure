@@ -2,15 +2,17 @@
 #menu-main-menu {
     text-align: center;
     padding-bottom: 0px;
-    display: flex;
-    justify-content: center;
+    @media (min-width: 769px){
+        display: flex;
+        justify-content: center;
+    }
     li{
         background-size: 100% 200%;
         background-image: linear-gradient(to top, $default-blue 50%, $default-orange 50%);
         -webkit-transition: background-position .2s;
         -moz-transition: background-position .2s;
         transition: background-position .2s;
-        width: 16.66%;
+        width: 16%;
         @media (max-width: 1000px) {
             a {
                 font-size: 12px !important;

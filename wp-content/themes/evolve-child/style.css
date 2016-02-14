@@ -74,28 +74,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 2, sass/styles/_menus.scss */
 #menu-main-menu {
   text-align: center;
-  padding-bottom: 0px;
-  display: flex;
-  justify-content: center; }
-  /* line 7, sass/styles/_menus.scss */
+  padding-bottom: 0px; }
+  @media (min-width: 769px) {
+    /* line 2, sass/styles/_menus.scss */
+    #menu-main-menu {
+      display: flex;
+      justify-content: center; } }
+  /* line 9, sass/styles/_menus.scss */
   #menu-main-menu li {
     background-size: 100% 200%;
     background-image: linear-gradient(to top, #1e3670 50%, #bc673c 50%);
     -webkit-transition: background-position .2s;
     -moz-transition: background-position .2s;
     transition: background-position .2s;
-    width: 16.66%; }
+    width: 16%; }
     @media (max-width: 1000px) {
-      /* line 15, sass/styles/_menus.scss */
+      /* line 17, sass/styles/_menus.scss */
       #menu-main-menu li a {
         font-size: 12px !important; } }
-  /* line 20, sass/styles/_menus.scss */
+  /* line 22, sass/styles/_menus.scss */
   #menu-main-menu li:hover {
     background-position: 0 -100%; }
-  /* line 23, sass/styles/_menus.scss */
+  /* line 25, sass/styles/_menus.scss */
   #menu-main-menu .active {
     background-color: #1e3670 !important; }
-    /* line 25, sass/styles/_menus.scss */
+    /* line 27, sass/styles/_menus.scss */
     #menu-main-menu .active a {
       background-color: #1e3670 !important; }
 
@@ -105,23 +108,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #bc673c !important;
-  min-height: 500px; }
-  /* line 9, sass/styles/_home.scss */
+  background-color: #1e3670 !important;
+  min-height: 450px;
+  box-shadow: 5px 6px 4px; }
+  /* line 10, sass/styles/_home.scss */
   .home-content-boxes .content-box h2 {
     font-family: Questrial !important;
     color: #fff; }
-  /* line 14, sass/styles/_home.scss */
+  /* line 15, sass/styles/_home.scss */
   .home-content-boxes .content-box p {
     font-size: 20px;
     font-family: Rosario !important;
     color: #c6cfe8; }
-  /* line 19, sass/styles/_home.scss */
+  /* line 20, sass/styles/_home.scss */
   .home-content-boxes .content-box .fa {
-    color: #1e3670; }
-  /* line 22, sass/styles/_home.scss */
+    color: #bc673c; }
+  /* line 23, sass/styles/_home.scss */
   .home-content-boxes .content-box .read-more {
-    background: #1e3670;
+    background: #bc673c;
     border: none !important;
     box-shadow: none !important; }
 
@@ -158,14 +162,61 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       .services .service .service-content .service-desc {
         width: 65%; }
 
-/* line 25, sass/style.scss */
+/* line 1, sass/styles/_header.scss */
+.container-header {
+  display: flex !important;
+  justify-content: center;
+  width: 100% !important; }
+  /* line 5, sass/styles/_header.scss */
+  .container-header .header-logo-container {
+    width: 20%; }
+  /* line 8, sass/styles/_header.scss */
+  .container-header .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%; }
+    /* line 14, sass/styles/_header.scss */
+    .container-header .title-container a {
+      padding: 0 !important; }
+  /* line 18, sass/styles/_header.scss */
+  .container-header #logo-image {
+    max-width: 200px !important;
+    float: none;
+    margin: 0px !important; }
+  /* line 23, sass/styles/_header.scss */
+  .container-header .contact-container {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 20%; }
+    /* line 30, sass/styles/_header.scss */
+    .container-header .contact-container h6 {
+      color: #fff; }
+
+@media (max-width: 950px) {
+  /* line 37, sass/styles/_header.scss */
+  .header-logo-container, .contact-container, #righttopcolumn {
+    display: none !important; }
+
+  /* line 40, sass/styles/_header.scss */
+  .title-container {
+    width: 100% !important;
+    padding-left: 5px;
+    padding-right: 5px; } }
+@media (max-width: 730px) {
+  font-size: 12px; }
+/* line 26, sass/style.scss */
 .btn {
   background: #1e3670;
   border: none !important;
   box-shadow: none !important;
   color: #fff !important; }
 
-/* line 31, sass/style.scss */
+/* line 32, sass/style.scss */
 .btn-contact {
   padding: 8px 25px !important;
   font-size: 18px !important;
