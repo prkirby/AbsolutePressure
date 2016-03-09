@@ -23,9 +23,9 @@
         background-position: 0 -100%
     }
     .active {
-        background-color: $default-blue !important;
+        background: $default-blue !important;
         a {
-            background-color: $default-blue !important;
+            background: $default-blue !important;
         }
     }
 }

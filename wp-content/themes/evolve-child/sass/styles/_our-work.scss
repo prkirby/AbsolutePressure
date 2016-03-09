@@ -1,0 +1,52 @@
+.our-work-content {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(space-around);
+    width: 100%;
+    $imgSize: 340px;
+    .our-work {
+        width: $imgSize;
+    }
+
+    .our-work-title {
+        text-align: center;
+    }
+    .our-work-images {
+        position: relative;
+        width: 100%;
+        height: $imgSize;
+        div {
+            width: 100%;
+            @include single-transition(ease-in-out, 3s);
+        }
+        .before-img {
+            img {
+                opacity: 1;
+                filter: alpha(opacity=100);
+                &:hover {
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                }
+            }
+        }
+        .after-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            img {
+                opacity: 0;
+                filter: alpha(opacity=0);
+                &:hover {
+                    opacity: 1;
+                    filter: alpha(opacity=100);
+                }
+            }
+        }
+
+    }
+    .our-work-description {
+        text-align: center;
+    }
+}
