@@ -1,7 +1,7 @@
 <?php 
 /*
 Plugin Name: jQuery Smooth Scroll
-Version: 1.3.2
+Version: 1.4.0
 Plugin URI: http://www.blogsynthesis.com/wordpress-jquery-smooth-scroll-plugin/
 Description: The plugin not only add smooth scroll to top feature/link in the lower-right corner of long pages while scrolling but also makes all jump links to scroll smoothly.
 Author: BlogSynthesis
@@ -48,7 +48,7 @@ if ( !class_exists( 'jQuerySmoothScroll' ) ) {
 	
 	class jQuerySmoothScroll {
 	
-		function jQuerySmoothScroll() {
+		public function __construct() {
 	
 			$blogsynthesis_jss_plugin_url = trailingslashit ( WP_PLUGIN_URL . '/' . dirname ( plugin_basename ( __FILE__ ) ) );
 			$pluginname = 'jQuery Smooth Scroll';
@@ -60,30 +60,30 @@ if ( !class_exists( 'jQuerySmoothScroll' ) ) {
 			add_action( 'wp_enqueue_scripts',  array( &$this, 'wp_head') ); 
 			
 			// add move to top button at wp_footer
-			// add_action( 'wp_footer',  array( &$this, 'wp_footer') );
+			add_action( 'wp_footer',  array( &$this, 'wp_footer') );
 
 		}
 
 		// load our css to the head
-		function wp_head() {
+		public function wp_head() {
 
 			if ( !is_admin() ) {
 				global $blogsynthesis_jss_plugin_url;
 
 				// register and enqueue CSS
-				wp_register_style( 'blogsynthesis_jss_css', plugin_dir_url( __FILE__ ) . 'css/jss-style.min.css', false );
-				wp_enqueue_style( 'blogsynthesis_jss_css' );
+				wp_register_style( 'jquery-smooth-scroll', plugin_dir_url( __FILE__ ) . 'css/jss-style.css', false );
+				wp_enqueue_style( 'jquery-smooth-scroll' );
 				
 				// enqueue script
 				wp_enqueue_script('jquery');
-				wp_enqueue_script( 'blogsynthesis-jss-script',  plugin_dir_url( __FILE__ ) . 'js/jss-script.min.js', array('jquery') );
+				wp_enqueue_script( 'jquery-smooth-scroll',  plugin_dir_url( __FILE__ ) . 'js/jss-script.js', array('jquery'),false, true );
 				
 				// You may now choose easing effect. For more information visit http://www.blogsynthesis.com/?p=860
 				// wp_enqueue_script("jquery-effects-core");
 			}
 		}
 
-		function wp_footer() {
+		public function wp_footer() {
 			// the html button which will be added to wp_footer ?>
 			<a id="scroll-to-top" href="#" title="<?php _e('Scroll to Top','blogsynthesis'); ?>"><?php _e('Top','blogsynthesis'); ?></a>
 			<?php
@@ -118,7 +118,7 @@ if ( !class_exists( 'jQuerySmoothScroll' ) ) {
 		
 		{ ?>
 			<div class="rss-widget">
-				<a href="http://www.blogsynthesis.com/#utm_source=wpadmin&utm_medium=dashboardwidget&utm_term=newsitemlogo&utm_campaign=shfs" title="BlogSynthesis - For Bloggers" target="_blank"><img src="http://static.blogsynthesis.com/public/blogsynthesis-100px.png"  class="alignright" alt="BlogSynthesis"/></a>			
+				<a href="http://www.blogsynthesis.com/support/#utm_source=wpadmin&utm_medium=dashboardwidget&utm_term=newsitemlogo&utm_campaign=jss" title="BlogSynthesis - For Bloggers" target="_blank"><img src="<?php  echo plugin_dir_url( __FILE__ ); ?>images/blogsynthesis-100px.png"  class="alignright" alt="BlogSynthesis"/></a>	
 				<ul>
 					<?php if ( $maxitems == 0 ) : ?>
 						<li><?php _e( 'No items', 'shfs-text-domain' ); ?></li>
@@ -141,9 +141,7 @@ if ( !class_exists( 'jQuerySmoothScroll' ) ) {
 					<a class="addthis_button_google_follow" addthis:userid="+BlogSynthesis"></a>
 					<a class="addthis_button_rss_follow" addthis:userid="http://feeds2.feedburner.com/blogsynthesis"></a>
 					</span>
-					&nbsp; &nbsp; &nbsp;
-					<a href="http://www.blogsynthesis.com/newsletter/"><img src="http://static.blogsynthesis.com/public/email-16px.png" alt="Subscribe via Email"/> Subscribe by email</a>
-					&nbsp; &nbsp; &nbsp;
+					<a href="http://www.blogsynthesis.com/support/#utm_source=wpadmin&utm_medium=dashboardwidget&utm_term=newsitemlogo&utm_campaign=jss"><img src="<?php  echo plugin_dir_url( __FILE__ ); ?>images/email-16px.png" alt="Subscribe via Email"/>Get Plugin Support</a>
 					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525ab1d176544441"></script>
 				</div>
 			</div>

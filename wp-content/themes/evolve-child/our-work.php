@@ -18,7 +18,7 @@ $the_query = new WP_Query($args);
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
     <div id="our-work--<?php the_ID(); ?>" class="our-work">
-        <h2 class="our-work-title"><?php the_title() ?></h2>
+        <h3 class="our-work-title"><?php the_title() ?></h3>
         <div class="our-work-images">
             <div class="before-img">
                 <img class="before-img" src="<?php the_field('image_before'); ?>"/>
@@ -27,7 +27,7 @@ $the_query = new WP_Query($args);
                 <img src="<?php the_field('image_after'); ?>"/>
             </div>
         </div>
-        <p class="our-work-description"><?php the_content() ?></p>
+        <p class="our-work-description"><?php the_field('description'); ?></p>
     </div>
 
 <?php endwhile; ?>

@@ -30,6 +30,24 @@ endif;
 
 <div id="primary" class="<?php evolve_layout_class($type = 1); ?>">
 
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <!--BEGIN .hentry-->
+        <div id="post-<?php the_ID(); ?>" class="<?php semantic_entries(); ?>">
+
+            <!--BEGIN .entry-content .article-->
+            <div class="entry-content article">
+
+                <?php the_content(__('READ MORE &raquo;', 'evolve')); ?>
+
+                <div class="clearfix"></div>
+
+            </div><!--END .entry-content .article-->
+        </div>
+    <?php
+            endwhile;
+        endif;
+    ?>
+
     <?php get_template_part('our-work'); ?>
 
 

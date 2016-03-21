@@ -90,6 +90,41 @@ function my_custom_post_types() {
         'supports'           => array( 'editor', 'comments', 'custom-fields')
     );
     register_post_type('testimonials', $args );
+
+    //Our Work Post Type
+    $labels = array(
+        'name'               => 'Our Work',
+        'singular_name'      => 'Our Work',
+        'menu_name'          => 'Our Work',
+        'name_admin_bar'     => 'Our Work',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New Our Work',
+        'new_item'           => 'New Our Work',
+        'edit_item'          => 'Edit Our Work',
+        'view_item'          => 'View Our Work',
+        'all_items'          => 'All Our Work',
+        'search_items'       => 'Search Our Work',
+        'parent_item_colon'  => 'Parent Our Work:',
+        'not_found'          => 'No Our Work found.',
+        'not_found_in_trash' => 'No Our Work found in Trash.',
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'menu_icon'          => 'dashicons-schedule',
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'our-work' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 7,
+        'supports'           => array( 'title', 'editor')
+    );
+    register_post_type('our-work', $args );
 }
 
 add_action( 'init', 'my_custom_post_types');
