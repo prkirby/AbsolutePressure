@@ -39,6 +39,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-size: 18px !important;
     font-family: $menu-font;
 }
+.menu-back {
+    margin-top: 55.5px; //For Sticky.js
+}
 // .page {
 //     a {
 //         color: $links !important;

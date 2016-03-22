@@ -72,34 +72,57 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* mixins */
 /* Style */
 /* Main Menu */
-/* line 2, sass/styles/_menus.scss */
+/* line 3, sass/styles/_menus.scss */
+.menu-header {
+  z-index: 1000; }
+
+/* line 6, sass/styles/_menus.scss */
+.main-menu-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0; }
+
+/* line 12, sass/styles/_menus.scss */
 #menu-main-menu {
   text-align: center;
   padding-bottom: 0px; }
   @media (min-width: 769px) {
-    /* line 2, sass/styles/_menus.scss */
+    /* line 12, sass/styles/_menus.scss */
     #menu-main-menu {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
       justify-content: center; } }
-  /* line 9, sass/styles/_menus.scss */
+  /* line 19, sass/styles/_menus.scss */
   #menu-main-menu li {
     background-size: 100% 200%;
     background-image: linear-gradient(to top, #1e3670 50%, #bc673c 50%);
-    -webkit-transition: background-position .2s;
-    -moz-transition: background-position .2s;
-    transition: background-position .2s;
+    -moz-transition-property: background-position;
+    -o-transition-property: background-position;
+    -webkit-transition-property: background-position;
+    transition-property: background-position;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
     width: 16%; }
     @media (max-width: 1000px) {
-      /* line 17, sass/styles/_menus.scss */
+      /* line 26, sass/styles/_menus.scss */
       #menu-main-menu li a {
         font-size: 12px !important; } }
-  /* line 22, sass/styles/_menus.scss */
+  /* line 31, sass/styles/_menus.scss */
   #menu-main-menu li:hover {
     background-position: 0 -100%; }
-  /* line 25, sass/styles/_menus.scss */
+  /* line 34, sass/styles/_menus.scss */
   #menu-main-menu .active {
     background: #1e3670 !important; }
-    /* line 27, sass/styles/_menus.scss */
+    /* line 36, sass/styles/_menus.scss */
     #menu-main-menu .active a {
       background: #1e3670 !important; }
 
@@ -318,3 +341,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 8px 25px !important;
   font-size: 18px !important;
   font-family: Questrial; }
+
+/* line 42, sass/style.scss */
+.menu-back {
+  margin-top: 55.5px; }

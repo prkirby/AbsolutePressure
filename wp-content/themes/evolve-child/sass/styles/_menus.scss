@@ -1,17 +1,26 @@
 /* Main Menu */
+//Sticky.js stuff
+.menu-header {
+    z-index: 1000;
+}
+.main-menu-scrolled {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+//End sticky.js stuff
 #menu-main-menu {
     text-align: center;
     padding-bottom: 0px;
     @media (min-width: 769px){
-        display: flex;
-        justify-content: center;
+        @include flexbox;
+        @include justify-content(center);
     }
     li{
         background-size: 100% 200%;
         background-image: linear-gradient(to top, $default-blue 50%, $default-orange 50%);
-        -webkit-transition: background-position .2s;
-        -moz-transition: background-position .2s;
-        transition: background-position .2s;
+        @include transition-property(background-position);
+        @include transition-duration(.2s);
         width: 16%;
         @media (max-width: 1000px) {
             a {
