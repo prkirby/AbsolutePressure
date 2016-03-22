@@ -1,6 +1,6 @@
 <?php
 /*
-Pushes the services offered in a table format
+Output loop for Our Work post types
 */
 
 // The Query

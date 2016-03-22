@@ -84,10 +84,10 @@ function my_custom_post_types() {
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'testimonials' ),
         'capability_type'    => 'post',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'hierarchical'       => false,
         'menu_position'      => 6,
-        'supports'           => array( 'editor', 'comments', 'custom-fields')
+        'supports'           => array('title')
     );
     register_post_type('testimonials', $args );
 
@@ -119,7 +119,7 @@ function my_custom_post_types() {
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'our-work' ),
         'capability_type'    => 'post',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'hierarchical'       => false,
         'menu_position'      => 7,
         'supports'           => array( 'title', 'editor')
