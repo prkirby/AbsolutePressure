@@ -1,0 +1,29 @@
+.testimonial-content {
+    .testimonial {
+        width: 100%;
+        margin: 50px 0;
+        @include flexbox;
+    }
+    div:nth-child(even) {
+        @include flex-direction(row-reverse);
+    }
+    .testimonial-image {
+        margin: 0 15px;
+        img {
+            width: 200px;
+            height: 200px;
+            border: 3px solid $default-blue;
+            border-radius: 50%;
+            max-width: none;
+        }
+    }
+    .testimonial-info {
+        padding: 0 15px;
+
+    }
+}
+@media (max-width: 600px) {
+    .testimonial-content .testimonial {
+        @include flex-wrap(wrap);
+    }
+}
