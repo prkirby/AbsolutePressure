@@ -17,10 +17,11 @@
         @include justify-content(center);
     }
     li{
-        background-size: 100% 200%;
+        background-size: 100% 250%;
         background-image: linear-gradient(to top, $default-blue 50%, $default-orange 50%);
         @include transition-property(background-position);
         @include transition-duration(.2s);
+        @include transition-timing-function(ease-in-out);
         width: 16%;
         @media (max-width: 1000px) {
             a {
@@ -29,7 +30,7 @@
         }
     }
     li:hover {
-        background-position: 0 -100%
+        background-position: 0 -80%
     }
     .active {
         background: $default-blue !important;

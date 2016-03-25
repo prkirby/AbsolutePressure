@@ -12,7 +12,7 @@ jQuery(function($) {
 	var scrollElem = $('a#scroll-to-top');
 	
 	// Scroll Speed. Change the number to change the speed
-	var scrollSpeed = 600;
+	var scrollSpeed = 500;
 	
 	// Choose your easing effect http://jqueryui.com/resources/demos/effect/easing.html
 	var scrollStyle = 'swing';
@@ -52,7 +52,7 @@ jQuery(function($) {
     {
       
       var target = $(this.hash),
-      headerHeight = $(".primary-header").height() + 5; // Get fixed header height
+      headerHeight = $(".menu-header").outerHeight() + 10; // Get fixed header height
             
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
               

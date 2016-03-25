@@ -28,6 +28,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "styles/_header.scss";
 @import "styles/_our-work.scss";
 @import "styles/_testimonials.scss";
+@import "styles/_footer.scss";
 
 .btn {
     background: $default-blue;
@@ -42,6 +43,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 .menu-back {
     margin-top: 55.5px; //For Sticky.js
+}
+#tagline-location {
+    color: #aaaaaa;
+    font-weight: 400;
+    font-family: Roboto;
+    font-size: 13px;
 }
 // .page {
 //     a {

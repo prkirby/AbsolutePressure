@@ -108,6 +108,7 @@
                                     echo $tagline;
                                 }
                                 ?>
+                                <div id="tagline-location">Charlotte - Lake Norman</div>
                             </div>
                             <!--END .title-container-->
                             <!--Begin .contact-container-->
@@ -300,6 +301,9 @@
                         <div id="content">
                             <?php
                             if (is_front_page()) {
+                                echo '<div class="angies-list-service-badge">
+                                <script type="text/javascript" src="http://www.angieslist.com/webbadge/insertwebbadge.js?bid=1cac9b614869051e6fde5a68af33d8ad"></script><script type="text/javascript">if (BADGEBOX) BADGEBOX.PlaceBadge();</script><noscript><div id="ssanslnk"><a href="http://www.angieslist.com/companylist/us/nc/cornelius/absolute-pressure-wash-reviews-2098172.aspx" title="Angie\'s List Super Service Award winner">CHARLOTTE deck cleaning</a></div></noscript>
+                                    </div>';
                                 evolve_content_boxes();
                             }
                             ?>

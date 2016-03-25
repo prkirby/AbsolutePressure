@@ -1,15 +1,21 @@
-.container-header {
-    display: flex !important;
-    justify-content: center;
+#righttopcolumn {
+    display: none;
+}
+.container.container-header {
+    @include flexbox;
+    @include justify-content(center);
     width: 100% !important;
     .header-logo-container {
         width: 20%;
+        a {
+            display: block;
+        }
     }
     .title-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        @include flexbox;
+        @include flex-direction(column);
+        @include justify-content(flex-start);
+        @include align-items(center);
         width: 60%;
         a {
             padding: 0 !important;
@@ -22,10 +28,10 @@
     }
     .contact-container {
         text-align: justify;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
+        @include flexbox;
+        @include flex-direction(column);
+        @include justify-content(flex-start);
+        @include align-items(flex-end);
         width: 20%;
         h6 {
             color: $white;
@@ -34,13 +40,18 @@
 }
 
 @media (max-width:950px) {
-    .header-logo-container, .contact-container, #righttopcolumn {
-        display: none !important;
-    }
-    .title-container {
-        width: 100% !important;
-        padding-left: 5px;
-        padding-right: 5px;
+    .container.container-header {
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        @include flex-wrap(wrap);
+        .header-logo-container, .contact-container, .title-container {
+            width: 100%;
+            text-align: center;
+            @include align-items(center);
+        }
+        .header-logo-container a {
+            text-align: center;
+        }
     }
 }
 @media (max-width: 730px) {

@@ -101,7 +101,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       justify-content: center; } }
   /* line 19, sass/styles/_menus.scss */
   #menu-main-menu li {
-    background-size: 100% 200%;
+    background-size: 100% 250%;
     background-image: linear-gradient(to top, #1e3670 50%, #bc673c 50%);
     -moz-transition-property: background-position;
     -o-transition-property: background-position;
@@ -111,18 +111,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -o-transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
     width: 16%; }
     @media (max-width: 1000px) {
-      /* line 26, sass/styles/_menus.scss */
+      /* line 27, sass/styles/_menus.scss */
       #menu-main-menu li a {
         font-size: 12px !important; } }
-  /* line 31, sass/styles/_menus.scss */
+  /* line 32, sass/styles/_menus.scss */
   #menu-main-menu li:hover {
-    background-position: 0 -100%; }
-  /* line 34, sass/styles/_menus.scss */
+    background-position: 0 -80%; }
+  /* line 35, sass/styles/_menus.scss */
   #menu-main-menu .active {
     background: #1e3670 !important; }
-    /* line 36, sass/styles/_menus.scss */
+    /* line 37, sass/styles/_menus.scss */
     #menu-main-menu .active a {
       background: #1e3670 !important; }
 
@@ -153,14 +157,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     border: none !important;
     box-shadow: none !important; }
 
+/* line 30, sass/styles/_home.scss */
+.angies-list-service-badge {
+  text-align: center;
+  margin-bottom: 35px; }
+
 /* line 1, sass/styles/_whatwedo.scss */
 .services {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column; }
   /* line 4, sass/styles/_whatwedo.scss */
   .services .service {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
     justify-content: space-around;
     margin: 60px 0; }
     /* line 9, sass/styles/_whatwedo.scss */
@@ -175,62 +205,156 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       background-color: #bc673c; }
     /* line 19, sass/styles/_whatwedo.scss */
     .services .service .service-content {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-direction: normal;
+      -webkit-box-orient: horizontal;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
       flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
       justify-content: space-between;
-      align-items: flex-start; }
-      /* line 24, sass/styles/_whatwedo.scss */
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      -webkit-align-items: flex-start;
+      -moz-align-items: flex-start;
+      align-items: flex-start;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      /* line 25, sass/styles/_whatwedo.scss */
       .services .service .service-content .service-img {
         width: 30%; }
-      /* line 27, sass/styles/_whatwedo.scss */
+      /* line 28, sass/styles/_whatwedo.scss */
       .services .service .service-content .service-desc {
         width: 65%; }
 
+@media (max-width: 768px) {
+  /* line 36, sass/styles/_whatwedo.scss */
+  .services .service .service-content .service-img, .services .service .service-content .service-desc {
+    width: 100%; } }
 /* line 1, sass/styles/_header.scss */
-.container-header {
-  display: flex !important;
+#righttopcolumn {
+  display: none; }
+
+/* line 4, sass/styles/_header.scss */
+.container.container-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
   width: 100% !important; }
-  /* line 5, sass/styles/_header.scss */
-  .container-header .header-logo-container {
-    width: 20%; }
   /* line 8, sass/styles/_header.scss */
-  .container-header .title-container {
+  .container.container-header .header-logo-container {
+    width: 20%; }
+    /* line 10, sass/styles/_header.scss */
+    .container.container-header .header-logo-container a {
+      display: block; }
+  /* line 14, sass/styles/_header.scss */
+  .container.container-header .title-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
     justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
     align-items: center;
     width: 60%; }
-    /* line 14, sass/styles/_header.scss */
-    .container-header .title-container a {
+    /* line 20, sass/styles/_header.scss */
+    .container.container-header .title-container a {
       padding: 0 !important; }
-  /* line 18, sass/styles/_header.scss */
-  .container-header #logo-image {
+  /* line 24, sass/styles/_header.scss */
+  .container.container-header #logo-image {
     max-width: 200px !important;
     float: none;
     margin: 0px !important; }
-  /* line 23, sass/styles/_header.scss */
-  .container-header .contact-container {
+  /* line 29, sass/styles/_header.scss */
+  .container.container-header .contact-container {
     text-align: justify;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
     justify-content: flex-start;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
     align-items: flex-end;
     width: 20%; }
-    /* line 30, sass/styles/_header.scss */
-    .container-header .contact-container h6 {
+    /* line 36, sass/styles/_header.scss */
+    .container.container-header .contact-container h6 {
       color: #fff; }
 
 @media (max-width: 950px) {
-  /* line 37, sass/styles/_header.scss */
-  .header-logo-container, .contact-container, #righttopcolumn {
-    display: none !important; }
-
-  /* line 40, sass/styles/_header.scss */
-  .title-container {
-    width: 100% !important;
-    padding-left: 5px;
-    padding-right: 5px; } }
+  /* line 43, sass/styles/_header.scss */
+  .container.container-header {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    /* line 47, sass/styles/_header.scss */
+    .container.container-header .header-logo-container, .container.container-header .contact-container, .container.container-header .title-container {
+      width: 100%;
+      text-align: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center; }
+    /* line 52, sass/styles/_header.scss */
+    .container.container-header .header-logo-container a {
+      text-align: center; } }
 @media (max-width: 730px) {
   font-size: 12px; }
 /* line 1, sass/styles/_our-work.scss */
@@ -367,19 +491,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; } }
-/* line 32, sass/style.scss */
+/* line 1, sass/styles/_footer.scss */
+.angies-list-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+/* line 6, sass/styles/_footer.scss */
+.aps-social-icon-wrapper {
+  text-align: right; }
+
+/* line 10, sass/styles/_footer.scss */
+#text-3 .textwidget {
+  color: #aaaaaa; }
+
+/* line 33, sass/style.scss */
 .btn {
   background: #1e3670;
   border: none !important;
   box-shadow: none !important;
   color: #fff !important; }
 
-/* line 38, sass/style.scss */
+/* line 39, sass/style.scss */
 .btn-contact {
   padding: 8px 25px !important;
   font-size: 18px !important;
   font-family: Questrial; }
 
-/* line 43, sass/style.scss */
+/* line 44, sass/style.scss */
 .menu-back {
   margin-top: 55.5px; }
+
+/* line 47, sass/style.scss */
+#tagline-location {
+  color: #aaaaaa;
+  font-weight: 400;
+  font-family: Roboto;
+  font-size: 13px; }
