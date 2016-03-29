@@ -49,8 +49,9 @@
             text-align: center;
             @include align-items(center);
         }
-        .header-logo-container a {
-            text-align: center;
+        #logo-image {
+            margin: auto !important;
+            margin-bottom: 10px !important;
         }
     }
 }

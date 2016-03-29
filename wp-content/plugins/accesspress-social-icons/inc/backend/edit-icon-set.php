@@ -239,9 +239,11 @@ $icon_extra = unserialize($icon_set->icon_extra);
                                                         <span class="aps-arrow-down aps-arrow button button-secondary" aria-label="expand icons">
                                                             <i class="dashicons dashicons-arrow-down"></i>
                                                         </span>
+                                                        <?php if ($icon_extra['icon_set_type'] == 1) { ?>
                                                         <span class="aps-delete-icon button button-secondary" aria-label="delete icons">
                                                             <i class="dashicons dashicons-trash"></i>
                                                         </span>
+                                                        <?php }?>
                                                     </span>
                                                 </div>
                                                 <div class="aps-icon-body" style="display: none;">

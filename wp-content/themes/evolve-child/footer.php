@@ -20,10 +20,10 @@
 <div class="footer">
     <!--BEGIN .container-->
     <div class="container container-footer">
-        <div class="angies-list-footer">
-            <div class="angies-list-web-badge" id = "angies-list-web-badge" style = "max-width:159px"><iframe src="http://www.angieslist.com/al-web-badge/2098172/93416" id="badge-iframe" frameborder="0" scrolling="no" style="width:100%; height: 160px; margin: 0;display: block;"></iframe></div>
-            <div class="angies-list-web-badge" id = "angies-list-web-badge" style = "max-width:265px"><iframe src="http://www.angieslist.com/al-web-badge/2098172/93431" id="badge-iframe" frameborder="0" scrolling="no" style="width:100%; height: 83px; margin: 0;display: block;"></iframe> <p style = "margin: 2px 0; line-height: 10px;"><a style = "color: #888; font-size: 10px; text-decoration: none; font-family: helvetica;" title = "We Have Reviews for Pressure Washing Services in Charlotte" href="http://www.angieslist.com/companylist/charlotte/pressure-washing.htm">We Have Reviews for Pressure Washing Services in Charlotte</a></p></div>
-        </div>
+        <!-- <div class="angies-list-footer"> -->
+            <!-- <div class="angies-list-web-badge" id = "angies-list-web-badge" style = "max-width:159px"><iframe src="http://www.angieslist.com/al-web-badge/2098172/93416" id="badge-iframe" frameborder="0" scrolling="no" style="width:100%; height: 160px; margin: 0;display: block;"></iframe></div> -->
+            <!-- <div class="angies-list-web-badge" id = "angies-list-web-badge" style = "max-width:265px"><iframe src="http://www.angieslist.com/al-web-badge/2098172/93431" id="badge-iframe" frameborder="0" scrolling="no" style="width:100%; height: 83px; margin: 0;display: block;"></iframe> <p style = "margin: 2px 0; line-height: 10px;"><a style = "color: #888; font-size: 10px; text-decoration: none; font-family: helvetica;" title = "We Have Reviews for Pressure Washing Services in Charlotte" href="http://www.angieslist.com/companylist/charlotte/pressure-washing.htm">We Have Reviews for Pressure Washing Services in Charlotte</a></p></div> -->
+        <!-- </div> -->
         <?php
         $evolve_widgets_footer = evolve_get_option('evl_widgets_num', 'disable');
         // if Footer widgets exist

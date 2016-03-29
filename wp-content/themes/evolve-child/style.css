@@ -353,8 +353,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       -moz-align-items: center;
       align-items: center; }
     /* line 52, sass/styles/_header.scss */
-    .container.container-header .header-logo-container a {
-      text-align: center; } }
+    .container.container-header #logo-image {
+      margin: auto !important;
+      margin-bottom: 10px !important; } }
 @media (max-width: 730px) {
   font-size: 12px; }
 /* line 1, sass/styles/_our-work.scss */
@@ -472,15 +473,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   flex-direction: row-reverse; }
 /* line 10, sass/styles/_testimonials.scss */
 .testimonial-content .testimonial-image {
-  margin: 0 15px; }
-  /* line 12, sass/styles/_testimonials.scss */
+  margin: 0 15px;
+  min-width: 200px; }
+  /* line 13, sass/styles/_testimonials.scss */
   .testimonial-content .testimonial-image img {
     width: 200px;
     height: 200px;
     border: 3px solid #1e3670;
     border-radius: 50%;
     max-width: none; }
-/* line 20, sass/styles/_testimonials.scss */
+/* line 21, sass/styles/_testimonials.scss */
 .testimonial-content .testimonial-info {
   padding: 0 15px; }
 
@@ -492,30 +494,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; } }
 /* line 1, sass/styles/_footer.scss */
-.angies-list-footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center; }
-
-/* line 6, sass/styles/_footer.scss */
 .aps-social-icon-wrapper {
   text-align: right; }
 
-/* line 10, sass/styles/_footer.scss */
+/* line 5, sass/styles/_footer.scss */
 #text-3 .textwidget {
-  color: #aaaaaa; }
+  color: #aaaaaa;
+  text-align: center; }
+
+/* line 10, sass/styles/_footer.scss */
+.footer-widgets .widgets-back-inside > div {
+  height: 100%; }
 
 /* line 33, sass/style.scss */
 .btn {

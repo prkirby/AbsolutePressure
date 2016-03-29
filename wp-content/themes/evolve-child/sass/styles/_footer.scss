@@ -1,13 +1,12 @@
-.angies-list-footer {
-    @include flexbox;
-    @include justify-content(space-between);
-    @include align-items(center);
-}
 .aps-social-icon-wrapper {
     text-align: right;
 }
 #text-3 {
     .textwidget {
         color: #aaaaaa;
+        text-align: center;
     }
+}
+.footer-widgets .widgets-back-inside > div {
+    height: 100%;
 }
