@@ -162,84 +162,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
   margin-bottom: 35px; }
 
-/* line 1, sass/styles/_whatwedo.scss */
-.services {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-  /* line 4, sass/styles/_whatwedo.scss */
-  .services .service {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: distribute;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    justify-content: space-around;
-    margin: 60px 0; }
-    /* line 9, sass/styles/_whatwedo.scss */
-    .services .service h1 {
-      text-align: center;
-      font-family: Questrial; }
-    /* line 13, sass/styles/_whatwedo.scss */
-    .services .service hr {
-      height: 3px;
-      width: 85%;
-      border-color: #bc673c;
-      background-color: #bc673c; }
-    /* line 19, sass/styles/_whatwedo.scss */
-    .services .service .service-content {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-direction: normal;
-      -webkit-box-orient: horizontal;
-      -webkit-flex-direction: row;
-      -moz-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      justify-content: space-between;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      -webkit-align-items: flex-start;
-      -moz-align-items: flex-start;
-      align-items: flex-start;
-      -webkit-flex-wrap: wrap;
-      -moz-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-      /* line 25, sass/styles/_whatwedo.scss */
-      .services .service .service-content .service-img {
-        width: 30%; }
-      /* line 28, sass/styles/_whatwedo.scss */
-      .services .service .service-content .service-desc {
-        width: 65%; }
+/* line 2, sass/styles/_services-offered.scss */
+.services .services-offered-slider {
+  width: 80%;
+  margin: auto; }
+/* line 6, sass/styles/_services-offered.scss */
+.services .flex-direction-nav a {
+  height: 60px; }
+/* line 9, sass/styles/_services-offered.scss */
+.services .service-desc {
+  margin-top: 40px; }
 
-@media (max-width: 768px) {
-  /* line 36, sass/styles/_whatwedo.scss */
-  .services .service .service-content .service-img, .services .service .service-content .service-desc {
+@media (max-width: 760px) {
+  /* line 14, sass/styles/_services-offered.scss */
+  .services .services-offered-slider {
     width: 100%; } }
 /* line 1, sass/styles/_header.scss */
 #righttopcolumn {

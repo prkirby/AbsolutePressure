@@ -1,0 +1,17 @@
+.services {
+    .services-offered-slider {
+        width: 80%;
+        margin: auto;
+    }
+    .flex-direction-nav a {
+        height: 60px;
+    }
+    .service-desc {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 760px) {
+    .services .services-offered-slider {
+        width: 100%;
+    }
+}

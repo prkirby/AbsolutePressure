@@ -12,24 +12,43 @@ $args = array (
     'order' => 'ASC'
 );
 $the_query = new WP_Query($args);
-// The Loop
-if ( $the_query->have_posts() ) {
-    echo '<div class="services">';
-    while ( $the_query->have_posts() ) {
-        $the_query->the_post();
-        echo '<div id="service-'.get_the_ID().'" class="service">
-                <h1 class="service-title">' . get_the_title() . '</h1>
+
+ ?>
+
+<?php if ( $the_query->have_posts() ) : ?>
+    <div class="services">
+    <?php while ( $the_query->have_posts() ) : ?>
+        <?php $the_query->the_post(); ?>
+        <div id="service-<?php the_ID(); ?>" class="service">
+                <h1 class="service-title"> <?php the_title() ?> </h1>
                 <hr/>
                 <div class="service-content">
-                    <img class="service-img" src="' . get_the_post_thumbnail_url() . '">
-                    <p class="service-desc">' . get_the_content() . '</p>
+                    <?php
+
+                    $images = get_field('what_we_do_gallery');
+
+                    if( $images ): ?>
+                        <div id="service-<?php the_ID(); ?>-slider" class="flexslider services-offered-slider">
+                            <ul class="slides">
+                                <?php foreach( $images as $image ): ?>
+                                    <li>
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                        <p><?php echo $image['caption']; ?></p>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+
+                    <?php endif; ?>
+                    <div class="service-desc"> <?php the_content(); ?> </dvi>
                 </div>
-              </div>';
-    }
-    echo '</div>';
-} else {
-    // no posts found
-}
-/* Restore original Post Data */
-wp_reset_postdata();
- ?>
+        </div>
+    <?php endwhile; ?>
+    </div>
+<?php
+    /* Restore original Post Data */
+    wp_reset_postdata();
+?>
+<?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
