@@ -1,0 +1,19 @@
+input {
+    max-width: 100%;
+}
+textarea {
+    width: 100%;
+}
+input[type=tel] {
+    padding: 10px 8px;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .15) inset;
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, .15) inset;
+    -box-shadow: 0 0 4px rgba(0, 0, 0, .15) inset;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .15) inset;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background: #fff;
+}

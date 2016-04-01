@@ -55,18 +55,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-// Add the proper namespaces
-function amt_add_og_xml_namespace( $content ) {
-    $options = amt_get_options();
-    if ( $options['og_add_xml_namespaces'] == '1' ) {
-        //return ' xmlns:og="http://ogp.me/ns#" ' . $content;
-        return ' xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" ' . $content;
-    }
-    return $content;
-}
-add_filter('language_attributes', 'amt_add_og_xml_namespace');
-
-
 /**
  * Add contact method for Facebook author and publisher.
  */
@@ -212,7 +200,7 @@ function amt_add_opengraph_metadata_head( $post, $attachments, $embedded_media, 
         // Site Image
         // First check if a global image override URL has been entered.
         // If yes, use this image URL and override all other images.
-        $image_data = amt_get_image_attributes_array( amt_get_post_meta_image_url($post->ID) );
+        $image_data = amt_get_image_data( amt_get_post_meta_image_url($post->ID) );
         if ( ! empty($image_data) ) {
             $image_size = apply_filters( 'amt_image_size_index', 'full' );
             $image_meta_tags = amt_get_opengraph_image_metatags( $options, $image_data, $size=$image_size );
@@ -290,7 +278,7 @@ function amt_add_opengraph_metadata_head( $post, $attachments, $embedded_media, 
         // Site Image
         // First check if a global image override URL has been entered.
         // If yes, use this image URL and override all other images.
-        $image_data = amt_get_image_attributes_array( amt_get_post_meta_image_url($post->ID) );
+        $image_data = amt_get_image_data( amt_get_post_meta_image_url($post->ID) );
         if ( ! empty($image_data) ) {
             $image_size = apply_filters( 'amt_image_size_index', 'full' );
             $image_meta_tags = amt_get_opengraph_image_metatags( $options, $image_data, $size=$image_size );
@@ -385,7 +373,7 @@ function amt_add_opengraph_metadata_head( $post, $attachments, $embedded_media, 
         // Use an image from the 'Global image override' field.
         // Otherwise, use a user defined image via filter.
         // Otherwise use default image.
-        $image_data = amt_get_image_attributes_array( amt_get_term_meta_image_url( $tax_term_object->term_id ) );
+        $image_data = amt_get_image_data( amt_get_term_meta_image_url( $tax_term_object->term_id ) );
         if ( ! empty($image_data) ) {
             $image_size = apply_filters( 'amt_image_size_index', 'full' );
             $image_meta_tags = amt_get_opengraph_image_metatags( $options, $image_data, $size=$image_size );
@@ -404,7 +392,7 @@ function amt_add_opengraph_metadata_head( $post, $attachments, $embedded_media, 
                 $taxonomy_image_url = apply_filters( $taxonomy_image_url_filter_name, $options["default_image_url"] );
             }
             if ( ! empty( $taxonomy_image_url ) ) {
-                $image_data = amt_get_image_attributes_array( $taxonomy_image_url );
+                $image_data = amt_get_image_data( $taxonomy_image_url );
                 if ( ! empty($image_data) ) {
                     $image_size = apply_filters( 'amt_image_size_index', 'full' );
                     $image_meta_tags = amt_get_opengraph_image_metatags( $options, $image_data, $size=$image_size );
@@ -485,7 +473,7 @@ function amt_add_opengraph_metadata_head( $post, $attachments, $embedded_media, 
 
         // Profile Image
         // First use the global image override URL
-        $image_data = amt_get_image_attributes_array( amt_get_user_meta_image_url( $author->ID ) );
+        $image_data = amt_get_image_data( amt_get_user_meta_image_url( $author->ID ) );
         if ( ! empty($image_data) ) {
             $image_size = apply_filters( 'amt_image_size_index', 'full' );
             $image_meta_tags = amt_get_opengraph_image_metatags( $options, $image_data, $size=$image_size );
@@ -583,7 +571,7 @@ function amt_add_opengraph_metadata_head( $post, $attachments, $embedded_media, 
             $posttype_image_url = apply_filters( $posttype_image_url_filter_name, $options["default_image_url"] );
         }
         if ( ! empty( $posttype_image_url ) ) {
-            $image_data = amt_get_image_attributes_array( $posttype_image_url );
+            $image_data = amt_get_image_data( $posttype_image_url );
             if ( ! empty($image_data) ) {
                 $image_size = apply_filters( 'amt_image_size_index', 'full' );
                 $image_meta_tags = amt_get_opengraph_image_metatags( $options, $image_data, $size=$image_size );
@@ -741,7 +729,7 @@ function amt_add_opengraph_metadata_head( $post, $attachments, $embedded_media, 
 
         // First check if a global image override URL has been entered.
         // If yes, use this image URL and override all other images.
-        $image_data = amt_get_image_attributes_array( amt_get_post_meta_image_url($post->ID) );
+        $image_data = amt_get_image_data( amt_get_post_meta_image_url($post->ID) );
         if ( ! empty($image_data) ) {
             $image_size = apply_filters( 'amt_image_size_content', 'full' );
             $image_meta_tags = amt_get_opengraph_image_metatags( $options, $image_data, $size=$image_size );
@@ -1083,6 +1071,11 @@ function amt_get_opengraph_image_metatags( $options, $image_data, $size='medium'
     // We use wp_get_attachment_image_src() since it constructs the URLs
     //$thumbnail_meta = wp_get_attachment_image_src( $image->ID, 'thumbnail' );
     $main_size_meta = wp_get_attachment_image_src( $image_id, $size );
+    // Check if we have image data. $main_size_meta is false on error.
+    if ( $main_size_meta === false ) {
+        return $metadata_arr;
+    }
+
     // Image tags
     $metadata_arr[] = '<meta property="og:image" content="' . esc_url( $main_size_meta[0] ) . '" />';
     if ( is_ssl() || ( ! is_ssl() && $options["has_https_access"] == "1" ) ) {

@@ -162,6 +162,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
   margin-bottom: 35px; }
 
+/* line 1, sass/styles/_contact.scss */
+input {
+  max-width: 100%; }
+
+/* line 4, sass/styles/_contact.scss */
+textarea {
+  width: 100%; }
+
+/* line 7, sass/styles/_contact.scss */
+input[type=tel] {
+  padding: 10px 8px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15) inset;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15) inset;
+  -box-shadow: 0 0 4px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15) inset;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background: #fff; }
+
 /* line 2, sass/styles/_services-offered.scss */
 .services .services-offered-slider {
   width: 80%;
